@@ -1,0 +1,25 @@
+---
+import logo_1 from "../assets/logo_1.png";
+---
+
+<header
+    class="h-20 bg-white shadow-sm fixed w-full z-10 top-0 md:flex md:items-center"
+>
+    <div class="h-20 md:h-auto px-4 py-2 flex">
+        <div class="font-extrabold flex items-center">
+            <a href="/" class="cursor-pointer flex items-center">
+                <img
+                    src={logo_1.src}
+                    alt="Logo"
+                    class="w-14 h-14 md:max-h-14"
+                />
+            </a>
+        </div>
+        <nav class="hidden md:flex items-center gap-10 ml-auto">
+            <a href="#" class="hover:text-gray-400">Inicio</a>
+            <a href="#" class="hover:text-gray-400">Servicios</a>
+            <a href="#" class="hover:text-gray-400">Proyectos</a>
+            <a href="#" class="hover:text-gray-400">Contacto</a>
+        </nav>
+    </div>
+</header>
