@@ -29,8 +29,29 @@ Constructora liderada por MUJERES"
 			rel="stylesheet"
 		/>
 	</head>
-	<body>
+	<body id="inicio">
 		<slot />
+		<script>
+			document.addEventListener("click", (e) => {
+				const link = e.target.closest("a[data-smooth-scroll]");
+				if (!link) return;
+				const target = document.querySelector(
+					link.getAttribute("href"),
+				);
+				if (target) {
+					e.preventDefault();
+					const header = document.querySelector("header");
+					const headerHeight = header ? header.offsetHeight : 0;
+					const offset = 24; // margen extra en px
+					const top =
+						target.getBoundingClientRect().top +
+						window.scrollY -
+						headerHeight -
+						offset;
+					window.scrollTo({ top, behavior: "smooth" });
+				}
+			});
+		</script>
 	</body>
 </html>
 

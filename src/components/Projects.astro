@@ -1,0 +1,78 @@
+---
+import project1 from "../assets/images/project_1.png";
+import project2 from "../assets/images/project_2.png";
+import project3 from "../assets/images/project_3.png";
+import project4 from "../assets/images/project_4.png";
+import project5 from "../assets/images/project_5.png";
+import project6 from "../assets/images/project_6.png";
+
+const projects = [
+    {
+        image: project1,
+        category: "Arquitectura",
+        title: "Diseño Residencial",
+        description: "Proyecto de diseño residencial moderno y minimalista.",
+    },
+    {
+        image: project2,
+        category: "Interiorismo",
+        title: "Oficinas Corporativas",
+        description: "Renovación de espacios de trabajo para mayor confort.",
+    },
+    {
+        image: project3,
+        category: "Construcción",
+        title: "Edificio Comercial",
+        description: "Construcción de un complejo comercial de tres plantas.",
+    },
+    {
+        image: project4,
+        category: "Arquitectura",
+        title: "Casa de Campo",
+        description: "Diseño y construcción de vivienda unifamiliar.",
+    },
+    {
+        image: project5,
+        category: "Remodelación",
+        title: "Restaurante Local",
+        description: "Modernización de interiores y fachada exterior.",
+    },
+    {
+        image: project6,
+        category: "Urbanismo",
+        title: "Parque Recreativo",
+        description: "Desarrollo de áreas verdes y zonas de esparcimiento.",
+    },
+];
+---
+
+<section id="projects" class="w-[98%] mx-auto mt-12">
+    <h1 class="text-center text-4xl font-bold mb-12">
+        <span class="text-[#b18a61]">Nuestros</span> Últimos Proyectos
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-[80%] mx-auto">
+        {
+            projects.map((project) => (
+                <div class="relative card group overflow-hidden cursor-pointer">
+                    <img
+                        src={project.image.src}
+                        alt={project.title}
+                        class="w-full h-auto transition-transform duration-500 group-hover:scale-110 object-cover"
+                    />
+                    <div class="absolute inset-0 bg-[#b18a61]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div class="absolute bottom-0 left-0 w-[85%] max-w-[320px] bg-[#1a1a1a] p-6 sm:p-8 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out">
+                        <p class="text-[#b18a61] text-xs font-semibold tracking-widest uppercase mb-2">
+                            {project.category}
+                        </p>
+                        <h4 class="text-xl md:text-2xl text-white font-bold leading-tight mb-2">
+                            {project.title}
+                        </h4>
+                        <p class="text-gray-400 text-sm">
+                            {project.description}
+                        </p>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</section>
