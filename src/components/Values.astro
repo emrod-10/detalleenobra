@@ -2,21 +2,25 @@
 import valuesImg from "../assets/images/img_values.png";
 ---
 
-<section id="values" class="w-[90%] mx-auto">
-    <div class="flex items-center justify-center">
-        <div class="p-20 w-full">
+<section id="values" class="w-full md:w-[90%] mx-auto mt-12">
+    <div class="flex flex-col md:flex-row items-center justify-center">
+        <div class="p-5 md:p-20 w-full">
             <img src={valuesImg.src} alt="" class="w-full h-auto" />
         </div>
-        <div class="flex flex-col items-start justify-center py-10 w-full">
-            <p class="text-[#b18a61] font-semibold text-lg">Sobre nosotros</p>
-            <h1 class="text-3xl font-bold">Nuestros Valores</h1>
-            <p class="text-lg text-gray-700">
+        <div
+            class="flex flex-col items-start justify-center py-5 pl-5 md:py-10 w-full"
+        >
+            <p class="text-[#b18a61] font-semibold text-lg mb-0.5">
+                Sobre nosotros
+            </p>
+            <h1 class="text-3xl font-bold mb-3">Nuestros Valores</h1>
+            <p class="text-sm md:text-lg text-gray-700 text-wrap p-0.5">
                 Arquitectas y diseñadoras con pasion por el diseño y la
                 construccion. Estamos constantemente especializandonos para
                 estar a la vanguardia de las mejores soluciones innovadoras y
                 eficientes para cada espacio.
             </p>
-            <ul class="space-y-4 pt-5 pl-1.5">
+            <ul class="space-y-4 pt-5 pl-2 md:pl-1.5">
                 <li class="flex items-center gap-2">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +37,7 @@ import valuesImg from "../assets/images/img_values.png";
                         ></path>
                     </svg>
 
-                    <span class="text-[#b18a61] font-bold text-xl"
+                    <span class="text-[#b18a61] font-bold text-sm md:text-xl"
                         >Elaboramos la propuesta de diseño</span
                     >
                 </li>
@@ -52,7 +56,7 @@ import valuesImg from "../assets/images/img_values.png";
                             d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                         ></path>
                     </svg>
-                    <span class="text-[#b18a61] font-bold text-xl"
+                    <span class="text-[#b18a61] font-bold text-sm md:text-xl"
                         >Coordinamos especialidades y proveedores</span
                     >
                 </li>
@@ -71,7 +75,7 @@ import valuesImg from "../assets/images/img_values.png";
                             d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                         ></path>
                     </svg>
-                    <span class="text-[#b18a61] font-bold text-xl"
+                    <span class="text-[#b18a61] font-bold text-sm md:text-xl"
                         >Supervisamos la ejecución</span
                     >
                 </li>

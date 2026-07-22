@@ -9,19 +9,23 @@ import bgCta from "../assets/bg_cta.jpg";
     <img src={bgCta.src} alt="" class="absolute top-0 left-0 w-full h-full" />
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="absolute inset-0 flex w-full items-center justify-center">
-        <div class="flex items-center justify-center w-[80%] mx-auto gap-5">
+        <div
+            class="grid grid-cols-1 md:grid-cols-2 items-center justify-center w-[80%] mx-auto gap-5"
+        >
             <div class="w-full">
-                <h1 class="text-4xl font-bold text-white text-center">
+                <h1
+                    class="text-3xl pb-5 md:text-4xl font-bold text-white text-center"
+                >
                     ¿Listo para iniciar tu proyecto?
                 </h1>
-                <p class="text-lg text-white text-center">
+                <p class="text-md md:text-lg text-white text-center">
                     Contáctanos para agendar una consulta y hablemos de tus
                     ideas sin ningún compromiso.
                 </p>
             </div>
             <div class="flex justify-center items-center w-full">
                 <button
-                    class="bg-[#d4b796] h-16 w-48 text-white font-bold py-2 px-4 rounded hover:bg-[#b18a61] cursor-pointer transition-colors duration-300"
+                    class="bg-[#d4b796] h-10 md:h-16 w-32 md:w-48 text-white font-bold py-2 px-4 rounded hover:bg-[#b18a61] cursor-pointer transition-colors duration-300"
                 >
                     Contáctanos
                 </button>

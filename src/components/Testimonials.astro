@@ -51,14 +51,14 @@ const testimonials = [
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
         <div>
           <p class="text-sm font-medium tracking-wider text-gray-500 uppercase mb-3">Nuestros testimonios</p>
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900">Lo que dicen nuestros clientes</h2>
+          <h2 class="text-3xl md:text-5xl font-bold text-gray-900">Lo que dicen nuestros clientes</h2>
         </div>
         
         <!-- Navigation Arrows -->
         <div class="flex gap-4">
           <button 
             @click="scrollPrev" 
-            class="w-14 h-14 rounded-full bg-[#1c1c1c] text-white flex items-center justify-center hover:bg-black transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+            class="hover:cursor-pointer  md:w-14 w-10 md:h-14 h-10 rounded-full bg-[#1c1c1c] text-white flex items-center justify-center hover:bg-black transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
             aria-label="Anterior testimonio"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -67,7 +67,7 @@ const testimonials = [
           </button>
           <button 
             @click="scrollNext" 
-            class="w-14 h-14 rounded-full bg-[#d2a373] text-white flex items-center justify-center hover:bg-[#c29362] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#d2a373]"
+            class="hover:cursor-pointer md:w-14 w-10 md:h-14 h-10 rounded-full bg-[#d2a373] text-white flex items-center justify-center hover:bg-[#c29362] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#d2a373]"
             aria-label="Siguiente testimonio"
           >
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -80,7 +80,7 @@ const testimonials = [
       <!-- Slider Container -->
       <div 
         x-ref="slider" 
-        class="flex overflow-x-auto snap-x snap-mandatory gap-8 pb-12 -mx-4 px-4 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+        class="flex overflow-x-auto snap-x snap-mandatory gap-8 pb-12 -mx-2 md:-mx-4 px-2 sm:mx-0 sm:px-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
       >
         {testimonials.map((t) => (
           <div class="snap-start w-full sm:w-[calc(50%-16px)] lg:w-[calc(33.333%-21.33px)] shrink-0 flex flex-col gap-8">

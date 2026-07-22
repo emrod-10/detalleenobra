@@ -47,7 +47,7 @@ const projects = [
 ---
 
 <section id="projects" class="w-[98%] mx-auto mt-12">
-    <h1 class="text-center text-4xl font-bold mb-12">
+    <h1 class="text-center text-2xl md:text-4xl font-bold mb-12">
         <span class="text-[#b18a61]">Nuestros</span> Últimos Proyectos
     </h1>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-[80%] mx-auto">
@@ -57,17 +57,20 @@ const projects = [
                     <img
                         src={project.image.src}
                         alt={project.title}
-                        class="w-full h-auto transition-transform duration-500 group-hover:scale-110 object-cover"
+                        class="w-full h-auto transition-transform duration-500 lg:group-hover:scale-110 object-cover"
                     />
-                    <div class="absolute inset-0 bg-[#b18a61]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                    <div class="absolute bottom-0 left-0 w-[85%] max-w-[320px] bg-[#1a1a1a] p-6 sm:p-8 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out">
-                        <p class="text-[#b18a61] text-xs font-semibold tracking-widest uppercase mb-2">
+                    {/* Overlay: ligero en mobile/tablet, dorado con hover en desktop */}
+                    <div class="absolute inset-0 bg-black/10 lg:bg-[#b18a61]/60 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                    
+                    {/* Información: estática y siempre visible en mobile/tablet, animada en desktop */}
+                    <div class="absolute bottom-0 left-0 w-[90%] md:w-[95%] lg:w-[85%] max-w-[320px] bg-[#1a1a1a]/95 lg:bg-[#1a1a1a] p-4 md:p-5 lg:p-8 transform translate-x-0 lg:-translate-x-full lg:group-hover:translate-x-0 transition-transform duration-500 ease-in-out">
+                        <p class="text-[#b18a61] text-xs md:text-[10px] lg:text-xs font-semibold tracking-widest uppercase mb-1 md:mb-2">
                             {project.category}
                         </p>
-                        <h4 class="text-xl md:text-2xl text-white font-bold leading-tight mb-2">
+                        <h4 class="text-lg md:text-base lg:text-2xl text-white font-bold leading-tight mb-1 md:mb-2">
                             {project.title}
                         </h4>
-                        <p class="text-gray-400 text-sm">
+                        <p class="text-gray-300 lg:text-gray-400 text-xs md:text-[11px] lg:text-sm">
                             {project.description}
                         </p>
                     </div>
